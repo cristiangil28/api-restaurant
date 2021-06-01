@@ -22,8 +22,8 @@ public class RestaurantRest {
 	@JsonIncludeProperties("image")
 	private String image;
 
-	@JsonIncludeProperties("turn")
-	private List<TurnRest> turn;
+	@JsonIncludeProperties("turns")
+	private List<TurnRest> turns;
 
 	public Long getId() {
 		return id;
@@ -66,11 +66,11 @@ public class RestaurantRest {
 	}
 
 	public List<TurnRest> getTurn() {
-		return turn;
+		return turns;
 	}
 
 	public void setTurn(List<TurnRest> turn) {
-		this.turn = turn;
+		this.turns = turn;
 	}
 	
 	

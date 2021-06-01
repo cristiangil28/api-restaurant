@@ -1,5 +1,7 @@
 package como.apirest.apirest.entities;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -25,10 +27,10 @@ public class Reservation {
 	private Long person;
 	
 	@Column(name = "TURN")
-	private Long turn;
+	private String turn;
 	
 	@Column(name = "DATE")
-	private Long date;
+	private Date date;
 	
 	@ManyToOne (fetch =  FetchType.LAZY)
 	@JoinColumn(name = "restaurant_ID", nullable = false)
@@ -58,11 +60,11 @@ public class Reservation {
 		this.person = person;
 	}
 
-	public Long getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(Long date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 
@@ -74,11 +76,11 @@ public class Reservation {
 		this.restaurant = restaurant;
 	}
 
-	public Long getTurn() {
+	public String getTurn() {
 		return turn;
 	}
 
-	public void setTurn(Long turn) {
+	public void setTurn(String turn) {
 		this.turn = turn;
 	}
 }
